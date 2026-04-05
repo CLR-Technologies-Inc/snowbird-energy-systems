@@ -1,0 +1,77 @@
+name: Bug Report
+description: Report a bug or incorrect data in the platform
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug. Please fill out the sections below so we can reproduce and fix it quickly.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: A clear description of the bug and what you expected to happen instead.
+      placeholder: "When I visit /energy/pricing, the chart tooltip shows undefined instead of the price value."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: The minimal sequence of steps that triggers the issue.
+      placeholder: |
+        1. Go to /energy/pricing
+        2. Hover over the Industrial bar
+        3. See "undefined" in the tooltip
+    validations:
+      required: true
+
+  - type: dropdown
+    id: route
+    attributes:
+      label: Affected route
+      options:
+        - /energy/overview
+        - /energy/consumption
+        - /energy/pricing
+        - /energy/ev-infrastructure
+        - /energy/renewables
+        - /energy/dynamic-reserves
+        - /energy/prompts
+        - / (Snowbird landing)
+        - /savings
+        - /savings-compare
+        - /annual
+        - Other / not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Node.js version, browser, and operating system.
+      placeholder: |
+        Node: 20.11.0
+        Browser: Chrome 124
+        OS: Windows 11
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots or screen recording
+      description: Drag and drop images here if applicable.
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Before submitting
+      options:
+        - label: I have searched existing issues and this is not a duplicate
+          required: true
+        - label: This is not a security vulnerability (use the Security tab for those)
+          required: true

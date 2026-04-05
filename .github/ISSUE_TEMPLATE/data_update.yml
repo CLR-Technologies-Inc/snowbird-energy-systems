@@ -1,0 +1,54 @@
+name: Data Update Request
+description: Request an update to EIA SEDS data, NYISO reference data, or borough opportunity figures
+labels: ["data", "enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to request or submit updated energy data. Annual EIA SEDS data is typically released mid-year for the prior year.
+
+  - type: dropdown
+    id: data_source
+    attributes:
+      label: Data source
+      options:
+        - EIA SEDS — sector consumption
+        - EIA SEDS — sector pricing
+        - EIA SEDS — EV infrastructure
+        - EIA SEDS — renewables generation
+        - EIA SEDS — degree days
+        - NYISO Dynamic Reserves reference data
+        - NYC borough opportunity estimates
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: data_year
+    attributes:
+      label: Data year
+      placeholder: "2025"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What needs updating?
+      description: Describe what has changed or what new data is available.
+    validations:
+      required: true
+
+  - type: input
+    id: source_url
+    attributes:
+      label: Source URL
+      description: Link to the official data source (EIA API, NYISO document, etc.)
+      placeholder: "https://www.eia.gov/opendata/browser/seds"
+
+  - type: textarea
+    id: data_snippet
+    attributes:
+      label: Data snippet (optional)
+      description: Paste the relevant tab-separated or JSON data if you have it ready.
+      render: text

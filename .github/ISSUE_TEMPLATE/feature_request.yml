@@ -1,0 +1,56 @@
+name: Feature Request
+description: Suggest a new chart, page, or capability for the platform
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Have an idea for the platform? We'd love to hear it. Please describe what you'd like and why it would be useful.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve?
+      description: Describe the gap or limitation in the current platform.
+      placeholder: "There is no way to compare pricing trends across multiple years side by side."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+      description: Describe what you'd like to see added or changed.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - New energy data chart
+        - New /energy/* page
+        - Snowbird savings feature
+        - Dynamic Reserves / LMORP
+        - Borough opportunity mapping
+        - Prompts library
+        - Data refresh tooling
+        - Performance or accessibility
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Any other approaches you thought about.
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Before submitting
+      options:
+        - label: I have searched existing issues and this is not a duplicate
+          required: true

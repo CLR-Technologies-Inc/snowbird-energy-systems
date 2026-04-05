@@ -1,0 +1,13 @@
+<svg width="320" height="60" viewBox="0 0 320 60" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="blueGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b69d1" />
+      <stop offset="100%" stop-color="#4aa7f0" />
+    </linearGradient>
+  </defs>
+  <rect width="320" height="60" rx="10" fill="#ffffff" />
+  <path d="M28 44c8-12 20-22 34-24 12-2 24 4 30 14 6-8 18-12 28-8 8 4 12 14 10 22-3 12-14 20-26 20-8 0-16-4-22-10-6 5-14 8-22 6-8-2-14-8-16-16-2-7 1-14 7-18c-6 1-12 3-18 7z" fill="url(#blueGradient)"/>
+  <path d="M38 33c-2 5 1 10 5 13 4 4 10 4 15 2 8-3 14-11 12-19-2-8-11-13-19-10-6 2-10 8-10 14z" fill="#0a47a5" opacity="0.9"/>
+  <text x="80" y="36" fill="#0d3a84" font-family="Inter, sans-serif" font-weight="800" font-size="22">snowbird</text>
+  <text x="80" y="52" fill="#4f78b8" font-family="Inter, sans-serif" font-weight="600" font-size="12">systems</text>
+</svg>
